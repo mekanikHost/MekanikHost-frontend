@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+
+<html lang="id">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Cek Domain - MekanikHost</title>
+<link href="style.css" rel="stylesheet"/>
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    header, .footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    header img {
+      width: 200px;
+      margin-bottom: 10px;
+    }
+
+    nav {
+      background-color: #495057;
+      padding: 15px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-size: 18px;
+      border-radius: 5px;
+      padding: 10px 20px;
+    }
+
+    nav a:hover {
+      background-color: #f9a825;
+    }
+
+    .section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .section h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .section p {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    .domain-check {
+      max-width: 500px;
+      margin: 0 auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .domain-check input {
+      width: 100%;
+      padding: 15px;
+      font-size: 16px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    .domain-check button {
+      background-color: #f9a825;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 8px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    .domain-check button:hover {
+      background-color: #333;
+    }
+
+    #hasil {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    @media screen and (max-width: 768px) {
+      .domain-check {
+        width: 90%;
+      }
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+<header>
+<img alt="MekanikHost Logo" src="path_to_logo.png"/>
+<h1>MekanikHost</h1>
+<p>Cek Ketersediaan Nama Domain</p>
+</header>
+<section class="section">
+<h2>Cek Domain Anda</h2>
+<p>Masukkan nama domain yang ingin Anda gunakan dan kami akan cekketersediaannya secara instan.</p>
+<div class="domain-check">
+<input id="domain" placeholder="contoh: mekaniktoto.com" type="text"/>
+<button onclick="cekDomain()">Cek Sekarang</button>
+<div id="hasil"></div>
+</div>
+</section>
+<footer class="footer">
+<p>© 2025 MekanikHost. All rights reserved. | 
+    <a href="privasi.html" style="color:#f9a825;">Kebijakan Privasi</a> | 
+    <a href="syarat.html" style="color:#f9a825;">Syarat dan Ketentuan</a>
+</p>
+</footer>
+<!-- Script Live Chat (optional) -->
+<script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/6803ff319b5afc191113e34e/1ip7ppo33';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+  })();
+</script>
+<script>
+  function cekDomain() {
+    const domain = document.getElementById('domain').value.trim();
+    const hasil = document.getElementById('hasil');
+
+    if (!domain) {
+      hasil.style.color = 'red';
+      hasil.textContent = "Silakan masukkan nama domain.";
+      return;
+    }
+
+    const tersedia = Math.random() > 0.5; // Simulasi hasil
+    if (tersedia) {
+      hasil.style.color = 'green';
+      hasil.innerHTML = `Selamat! Domain <strong>${domain}</strong> tersedia. <br><a href="order.html" style="color:#f9a825;">Pesan Sekarang</a>`;
+    } else {
+      hasil.style.color = 'red';
+      hasil.textContent = `Maaf, domain ${domain} sudah terdaftar.`;
+    }
+  }
+</script>
+</body>
+</html>

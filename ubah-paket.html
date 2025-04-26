@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html lang="id">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ubah Paket - MekanikHost</title>
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      color: #333;
+    }
+    header {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    header img {
+      width: 180px;
+      margin-bottom: 10px;
+    }
+    .ubah-container {
+      max-width: 600px;
+      margin: 50px auto;
+      background: white;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .ubah-container h2 {
+      font-size: 28px;
+      margin-bottom: 25px;
+      text-align: center;
+    }
+    label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 10px;
+    }
+    select, button {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0 20px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    button {
+      background-color: #f9a825;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #333;
+    }
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+    footer a {
+      color: #f9a825;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+<header>
+<img alt="MekanikHost Logo" src="logo.png"/>
+<h1>Ubah Paket Hosting</h1>
+<p>Pilih paket hosting baru sesuai kebutuhan Anda</p>
+</header>
+<section class="ubah-container">
+<h2>Pilih Paket Hosting</h2>
+<form action="payment.html" id="paketForm" method="GET" onsubmit="return submitPaket();">
+<label for="paketSelect">Pilih Paket:</label>
+<select id="paketSelect" name="paket" required="">
+<option disabled="" selected="" value="">-- Pilih Paket --</option>
+<option data-harga="50000" value="Shared Hosting">Shared Hosting - Rp 50.000/bulan</option>
+<option data-harga="150000" value="VPS Hosting">VPS Hosting - Rp 150.000/bulan</option>
+<option data-harga="250000" value="Cloud Hosting">Cloud Hosting - Rp 250.000/bulan</option>
+<option data-harga="500000" value="Dedicated Server">Dedicated Server - Rp 500.000/bulan</option>
+</select>
+<input id="hargaInput" name="harga" type="hidden"/>
+<button type="submit">Lanjut ke Pembayaran</button>
+</form>
+</section>
+<footer>
+<p>© 2025 MekanikHost. All rights reserved. |
+    <a href="privasi.html">Privasi</a> |
+    <a href="syarat.html">Syarat &amp; Ketentuan</a>
+</p>
+</footer>
+<script>
+  function submitPaket() {
+    const select = document.getElementById('paketSelect');
+    const harga = select.options[select.selectedIndex].getAttribute('data-harga');
+    document.getElementById('hargaInput').value = harga;
+    return true;
+  }
+</script>
+</body>
+</html>

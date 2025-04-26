@@ -1,0 +1,258 @@
+/* style.css */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f5f5f5;
+  color: #333;
+}
+
+header {
+  background-color: #d32f2f;
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+
+header .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+}
+
+.payment-methods {
+  max-width: 1200px;
+  margin: 50px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.payment-option-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.payment-option {
+  width: 30%;
+  margin-bottom: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.payment-option:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.payment-card {
+  background: linear-gradient(135deg, #f44336, #d32f2f);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.payment-card .payment-logo {
+  width: 100px;
+  margin: 20px 0;
+}
+
+.payment-card h3 {
+  font-size: 22px;
+}
+
+.payment-card .qr-code {
+  margin: 15px 0;
+  max-width: 200px;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.payment-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.payment-actions .btn {
+  background-color: #fff;
+  color: #d32f2f;
+  border: 2px solid #d32f2f;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.payment-actions .btn:hover {
+  background-color: #d32f2f;
+  color: white;
+  transform: scale(1.05);
+}
+
+.payment-status {
+  font-size: 14px;
+  color: green;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.payment-status.loading {
+  color: #f44336;
+}
+
+footer {
+  background-color: #d32f2f;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-top: 50px;
+}
+
+@media (max-width: 768px) {
+  .payment-option {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+/* style.css */
+
+/* Tampilan untuk tabel invoice */
+.invoice-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.invoice-table th, .invoice-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.invoice-table th {
+  background-color: #f44336;
+  color: white;
+}
+
+.invoice-table td {
+  background-color: #f9f9f9;
+}
+
+.status-paid {
+  color: green;
+  font-weight: bold;
+}
+
+.status-pending {
+  color: orange;
+  font-weight: bold;
+}
+
+.status-cancelled {
+  color: red;
+  font-weight: bold;
+}
+
+/* Tampilan form */
+form {
+  margin-top: 20px;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+form button {
+  padding: 10px 20px;
+  background-color: #d32f2f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #b71c1c;
+}
+/* style.css */
+
+/* Tampilan Form Order */
+.order {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.order h1 {
+  text-align: center;
+  color: #d32f2f;
+}
+
+.order p {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.order label {
+  font-size: 16px;
+  margin-bottom: 5px;
+  display: block;
+  color: #333;
+}
+
+.order select,
+.order input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+}
+
+.order button {
+  padding: 12px 20px;
+  background-color: #d32f2f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 100%;
+  font-size: 18px;
+}
+
+.order button:hover {
+  background-color: #b71c1c;
+}
+
+footer {
+  background-color: #d32f2f;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-top: 50px;
+}
+
+
+
+

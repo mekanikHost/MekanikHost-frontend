@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<html lang="id">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Edit Profil - MekanikHost</title>
+<meta content="Halaman Edit Profil Pengguna di MekanikHost" name="description"/>
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      color: #333;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    header img {
+      width: 180px;
+      margin-bottom: 10px;
+    }
+
+    nav {
+      background-color: #495057;
+      padding: 15px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-size: 18px;
+      border-radius: 5px;
+      padding: 10px 20px;
+    }
+
+    nav a:hover {
+      background-color: #f9a825;
+    }
+
+    .edit-profile-container {
+      max-width: 600px;
+      margin: 50px auto;
+      background: white;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .edit-profile-container h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input, button {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0 20px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    button {
+      background-color: #f9a825;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #333;
+    }
+
+    .footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+
+    .footer a {
+      color: #f9a825;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+  </style>
+</head>
+<body>
+<header>
+<img alt="MekanikHost Logo" src="path_to_logo.png"/>
+<h1>Edit Profil Anda</h1>
+<p>Perbarui informasi akun Anda untuk pengalaman yang lebih baik</p>
+</header>
+<nav>
+<a href="client-area.html">Dashboard</a>
+<a href="hosting.html">Layanan</a>
+<a href="cek-domain.html">Cek Domain</a>
+<a href="ticket.html">Tiket Bantuan</a>
+<a href="logout.html">Logout</a>
+</nav>
+<section class="edit-profile-container">
+<h2>Formulir Edit Profil</h2>
+<form action="client-area.html" method="POST">
+<label for="username">Nama Pengguna:</label>
+<input id="username" name="username" required="" type="text" value="John Doe"/>
+<label for="email">Email:</label>
+<input id="email" name="email" required="" type="email" value="johndoe@example.com"/>
+<label for="phone">Nomor Telepon:</label>
+<input id="phone" name="phone" required="" type="text" value="+62 812 3456 7890"/>
+<label for="address">Alamat:</label>
+<input id="address" name="address" required="" type="text" value="Jl. Raya No. 10, Jakarta"/>
+<button type="submit">Simpan Perubahan</button>
+</form>
+</section>
+<footer class="footer">
+<p>© 2025 MekanikHost. All rights reserved. |
+    <a href="privasi.html">Privasi</a> |
+    <a href="syarat.html">Syarat &amp; Ketentuan</a>
+</p>
+</footer>
+</body>
+</html>

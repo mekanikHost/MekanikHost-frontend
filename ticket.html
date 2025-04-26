@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<html lang="id">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Buka Tiket Bantuan - MekanikHost</title>
+<meta content="Buka Tiket Bantuan di MekanikHost" name="description"/>
+<meta content="bantuan, tiket, support, MekanikHost" name="keywords"/>
+<meta content="MekanikHost" name="author"/>
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      color: #333;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    header img {
+      width: 180px;
+      margin-bottom: 10px;
+    }
+
+    nav {
+      background-color: #495057;
+      padding: 15px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-size: 18px;
+      border-radius: 5px;
+      padding: 10px 20px;
+    }
+
+    nav a:hover {
+      background-color: #f9a825;
+    }
+
+    .ticket-container {
+      max-width: 600px;
+      margin: 50px auto;
+      background: white;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .ticket-container h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    input, textarea, button {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      font-size: 16px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+    }
+
+    button {
+      background-color: #f9a825;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #333;
+    }
+
+    .footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+
+    .footer a {
+      color: #f9a825;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+  </style>
+</head>
+<body>
+<header>
+<img alt="MekanikHost Logo" src="path_to_logo.png"/>
+<h1>MekanikHost</h1>
+<p>Buka Tiket Bantuan</p>
+</header>
+<nav>
+<a href="index.html">Beranda</a>
+<a href="hosting.html">Layanan</a>
+<a href="cek-domain.html">Cek Domain</a>
+<a href="contact.html">Kontak</a>
+<a href="about.html">Tentang Kami</a>
+</nav>
+<section class="ticket-container">
+<h2>Buka Tiket Bantuan</h2>
+<form action="submit-ticket.html" method="POST">
+<label for="subject">Subjek Tiket:</label>
+<input id="subject" name="subject" placeholder="Masukkan subjek masalah Anda" required="" type="text"/>
+<label for="description">Deskripsi Masalah:</label>
+<textarea id="description" name="description" placeholder="Jelaskan masalah atau pertanyaan Anda" required="" rows="6"></textarea>
+<label for="email">Email Anda:</label>
+<input id="email" name="email" placeholder="Masukkan email Anda" required="" type="email"/>
+<button type="submit">Kirim Tiket</button>
+</form>
+</section>
+<footer class="footer">
+<p>© 2025 MekanikHost. All rights reserved. |
+    <a href="privasi.html">Privasi</a> |
+    <a href="syarat.html">Syarat &amp; Ketentuan</a>
+</p>
+</footer>
+</body>
+</html>

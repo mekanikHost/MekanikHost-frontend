@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<html lang="id">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Rekomendasi AI - MekanikHost</title>
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      color: #333;
+    }
+    header {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    header img {
+      width: 160px;
+      margin-bottom: 10px;
+    }
+    .container {
+      max-width: 600px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    label {
+      font-weight: bold;
+      display: block;
+      margin: 15px 0 5px;
+    }
+    select, button {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      margin-bottom: 20px;
+    }
+    button {
+      background-color: #f9a825;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #333;
+    }
+    .result {
+      background-color: #e3f2fd;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+    footer a {
+      color: #f9a825;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+<header>
+<img alt="MekanikHost Logo" src="logo.png"/>
+<h1>Rekomendasi Paket AI</h1>
+<p>Dapatkan saran otomatis berdasarkan kebutuhan Anda</p>
+</header>
+<div class="container">
+<h2>Jawab Beberapa Pertanyaan</h2>
+<form onsubmit="event.preventDefault(); hasilRekomendasi();">
+<label for="trafik">Trafik Website Anda?</label>
+<select id="trafik">
+<option value="rendah">Rendah (&lt; 1.000/bulan)</option>
+<option value="sedang">Sedang (1.000 - 10.000)</option>
+<option value="tinggi">Tinggi (&gt; 10.000)</option>
+</select>
+<label for="fitur">Butuh Email Bisnis?</label>
+<select id="fitur">
+<option value="ya">Ya</option>
+<option value="tidak">Tidak</option>
+</select>
+<label for="online-store">Ada Toko Online?</label>
+<select id="online-store">
+<option value="ya">Ya</option>
+<option value="tidak">Tidak</option>
+</select>
+<button type="submit">Lihat Rekomendasi</button>
+</form>
+<div class="result" id="output" style="display:none;"></div>
+</div>
+<footer>
+<p>© 2025 MekanikHost. All rights reserved. |
+    <a href="index.html">Beranda</a> |
+    <a href="hosting.html">Layanan</a>
+</p>
+</footer>
+<script>
+  function hasilRekomendasi() {
+    const trafik = document.getElementById("trafik").value;
+    const fitur = document.getElementById("fitur").value;
+    const toko = document.getElementById("online-store").value;
+    let rekomendasi = "";
+
+    if (trafik === "rendah" && fitur === "tidak" && toko === "tidak") {
+      rekomendasi = "Paket Shared Hosting cocok untuk Anda.";
+    } else if (trafik === "sedang" || fitur === "ya") {
+      rekomendasi = "Kami sarankan VPS Hosting dengan fitur email bisnis.";
+    } else if (trafik === "tinggi" || toko === "ya") {
+      rekomendasi = "Paket Cloud Hosting sangat cocok untuk trafik tinggi & toko online.";
+    } else {
+      rekomendasi = "Silakan hubungi tim support kami untuk rekomendasi khusus.";
+    }
+
+    const output = document.getElementById("output");
+    output.innerHTML = `<h3>Rekomendasi Anda:</h3><p>${rekomendasi}</p><a href="hosting.html" class="cta-button">Pesan Sekarang</a>`;
+    output.style.display = "block";
+  }
+</script>
+</body>
+</html>

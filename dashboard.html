@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+
+<html lang="id">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Dashboard Klien - MekanikHost</title>
+<style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      color: #333;
+    }
+
+    header {
+      background-color: #333;
+      padding: 30px 20px;
+      color: white;
+      text-align: center;
+    }
+
+    header img {
+      width: 160px;
+      margin-bottom: 10px;
+    }
+
+    nav {
+      background-color: #495057;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 15px 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 17px;
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
+
+    nav a:hover {
+      background-color: #f9a825;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.06);
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      color: #444;
+    }
+
+    .status {
+      font-weight: bold;
+      color: green;
+    }
+
+    .alert {
+      color: #c62828;
+      background-color: #ffe9e9;
+      padding: 10px;
+      border-radius: 6px;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    .usage-bar {
+      background: #ddd;
+      border-radius: 5px;
+      overflow: hidden;
+      margin-top: 10px;
+    }
+
+    .usage {
+      background: #f9a825;
+      height: 20px;
+      text-align: right;
+      color: white;
+      padding-right: 5px;
+      line-height: 20px;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+
+    footer a {
+      color: #f9a825;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+<header>
+<img alt="MekanikHost Logo" src="logo.png"/>
+<h1>Dashboard Klien</h1>
+<p>Selamat datang kembali di area klien Anda</p>
+</header>
+<nav>
+<a href="client-area.html">Client Area</a>
+<a href="invoice.html">Tagihan</a>
+<a href="ubah-paket.html">Paket Hosting</a>
+<a href="ticket.html">Tiket</a>
+<a href="logout.html">Logout</a>
+</nav>
+<div class="container">
+<div class="grid">
+<div class="card">
+<h3>Status Hosting</h3>
+<p>mekaniktoto.com</p>
+<p class="status">Aktif</p>
+<p>Berakhir: 30 Desember 2025</p>
+</div>
+<div class="card">
+<h3>Status Domain</h3>
+<p>mekaniktoto.com</p>
+<p class="status">Terdaftar</p>
+<p>Perpanjangan: 12 Bulan</p>
+</div>
+<div class="card">
+<h3>Tagihan Tertunda</h3>
+<p>Invoice #INV20250421</p>
+<div class="alert">Belum Dibayar: Rp 45.000</div>
+</div>
+<div class="card">
+<h3>Aktivitas Login Terakhir</h3>
+<p>21 April 2025 - 15:42 WIB</p>
+<p>IP: 103.123.45.67</p>
+</div>
+<div class="card">
+<h3>Notifikasi</h3>
+<ul>
+<li>Paket Anda akan diperpanjang otomatis</li>
+<li>Dukungan 24/7 tersedia via tiket</li>
+<li>Tagihan baru tersedia</li>
+</ul>
+</div>
+<div class="card">
+<h3>Statistik Pemakaian</h3>
+<p>Disk Space: 2.5 GB / 10 GB</p>
+<div class="usage-bar"><div class="usage" style="width:25%">25%</div></div>
+<p>Bandwidth: 12 GB / 100 GB</p>
+<div class="usage-bar"><div class="usage" style="width:12%">12%</div></div>
+</div>
+</div>
+</div>
+<footer>
+<p>© 2025 MekanikHost. All rights reserved. |
+    <a href="privasi.html">Privasi</a> |
+    <a href="syarat.html">Syarat &amp; Ketentuan</a>
+</p>
+</footer>
+</body>
+</html>

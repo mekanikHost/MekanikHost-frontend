@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+
+<html lang="id">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Pemesanan Hosting MekanikHost" name="description"/>
+<meta content="order hosting, paket hosting, MekanikHost" name="keywords"/>
+<meta content="MekanikHost" name="author"/>
+<title>Pemesanan Hosting - MekanikHost</title>
+<style>
+        /* Styling sederhana untuk tampilan */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            text-align: center;
+            padding: 50px;
+        }
+
+        header h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        header p {
+            font-size: 20px;
+            font-weight: 300;
+        }
+
+        form {
+            width: 60%;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        input, select, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        button {
+            background-color: #f9a825;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #333;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        footer a {
+            color: #f9a825;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+<header><img alt="Mekanikhost Logo" src="https://i.imgur.com/4M7IWwP.png" style="height:50px;margin-right:10px;"/>
+<h1>Pilih Paket Hosting Anda</h1>
+<p>Isi form di bawah ini untuk memesan layanan hosting kami.</p>
+</header>
+<form id="payment-form">
+<label for="domain-full">Nama Domain</label>
+<input id="domain-full" name="domain-full" readonly="" required="" type="text"/>
+<label for="paket">Paket Hosting</label>
+<select id="paket" name="paket" required="">
+<option value="Shared Hosting">Shared Hosting - Rp 50.000/bulan</option>
+<option value="VPS Hosting">VPS Hosting - Rp 150.000/bulan</option>
+<option value="Cloud Hosting">Cloud Hosting - Rp 500.000/bulan</option>
+</select>
+<label for="durasi">Durasi (Bulan)</label>
+<input id="durasi" name="durasi" readonly="" required="" type="text"/>
+<label for="email">Email</label>
+<input id="email" name="email" required="" type="email"/>
+<button id="pay-button" type="button">Lanjut ke Pembayaran</button>
+</form>
+<footer>
+<p>© 2025 MekanikHost. All rights reserved. | <a href="privasi.html">Kebijakan Privasi</a> | <a href="syarat.html">Syarat dan Ketentuan</a></p>
+</footer>
+<script>
+        // Ambil parameter URL (misalnya dari halaman sebelumnya)
+        const params = new URLSearchParams(window.location.search);
+        const domainName = params.get("domain-name");
+        const domainType = params.get("domain-type");
+        const durasi = params.get("durasi");
+        const email = params.get("email");
+
+        // Menampilkan informasi yang diterima
+        document.getElementById("domain-full").value = domainName + domainType;
+        document.getElementById("durasi").value = durasi + " Bulan";
+        document.getElementById("email").value = email;
+
+        // Fungsi untuk memulai pembayaran
+        document.getElementById('pay-button').onclick = function () {
+            const domain = document.getElementById('domain-full').value;
+            const email = document.getElementById('email').value;
+            const paket = document.getElementById('paket').value;
+
+            // Kirim data ke server untuk mendapatkan token transaksi
+            fetch('payment-process.php', {
+                method: 'POST',
+                body: JSON.stringify({
+                    'domain-full': domain,
+                    'email': email,
+                    'paket': paket
+                }),
+                headers: { 'Content-Type': 'application/json' }
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.token) {
+                    // Menggunakan token untuk memulai transaksi di Midtrans Snap
+                    snap.pay(data.token, {
+                        onSuccess: function(result) {
+                            alert('Pembayaran berhasil!');
+                            console.log(result);
+                        },
+                        onPending: function(result) {
+                            alert('Pembayaran tertunda');
+                            console.log(result);
+                        },
+                        onError: function(result) {
+                            alert('Terjadi kesalahan dalam pembayaran');
+                            console.log(result);
+                        }
+                    });
+                } else {
+                    alert("Token tidak ditemukan.");
+                }
+            })
+            .catch(error => {
+                console.log("Error:", error);
+                alert("Terjadi kesalahan dalam pengolahan data.");
+            });
+        }
+    </script>
+</body>
+</html>

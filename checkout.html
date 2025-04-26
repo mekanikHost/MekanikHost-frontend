@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+
+<html lang="id">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Selesaikan pembayaran untuk paket hosting MekanikHost Anda. Daftar dan nikmati layanan hosting cepat dan aman." name="description"/>
+<meta content="checkout hosting, pembayaran hosting, MekanikHost, registrasi hosting" name="keywords"/>
+<meta content="MekanikHost" name="author"/>
+<title>Pendaftaran dan Pembayaran - MekanikHost</title>
+<style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            font-size: 20px;
+            font-weight: 300;
+        }
+
+        nav {
+            background-color: #495057;
+            padding: 15px 20px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 15px;
+            font-size: 18px;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            background-color: #f9a825;
+        }
+
+        .checkout-section {
+            padding: 60px 20px;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .checkout-section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .checkout-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .checkout-form input,
+        .checkout-form select,
+        .checkout-form button {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+
+        .checkout-form button {
+            background-color: #f9a825;
+            color: white;
+            cursor: pointer;
+            border: none;
+            font-size: 20px;
+            transition: background-color 0.3s;
+        }
+
+        .checkout-form button:hover {
+            background-color: #333;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        .footer a {
+            color: #f9a825;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            .checkout-form {
+                width: 90%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+<header><img alt="Mekanikhost Logo" src="https://i.imgur.com/4M7IWwP.png" style="height:50px;margin-right:10px;"/>
+<h1>MekanikHost</h1>
+<p>Selesaikan Pembayaran Paket Hosting Anda</p>
+</header>
+<nav>
+<a href="index.html">Beranda</a>
+<a href="hosting.html">Layanan</a>
+<a href="about.html">Tentang Kami</a>
+<a href="contact.html">Kontak</a>
+</nav>
+<section class="checkout-section">
+<h2>Lengkapi Pendaftaran Anda</h2>
+<p>Isi data di bawah ini untuk melanjutkan proses pembayaran dan pendaftaran paket hosting yang Anda pilih.</p>
+<form action="success.html" class="checkout-form" method="POST">
+<label for="name">Nama Lengkap</label>
+<input id="name" name="name" placeholder="Nama lengkap Anda" required="" type="text"/>
+<label for="email">Email</label>
+<input id="email" name="email" placeholder="Email Anda" required="" type="email"/>
+<label for="package">Pilih Paket Hosting</label>
+<select id="package" name="package" required="">
+<option value="shared">Shared Hosting</option>
+<option value="vps">VPS Hosting</option>
+<option value="cloud">Cloud Hosting</option>
+</select>
+<label for="payment-method">Metode Pembayaran</label>
+<select id="payment-method" name="payment-method" required="">
+<option value="credit-card">Kartu Kredit/Debit</option>
+<option value="bank-transfer">Transfer Bank</option>
+<option value="paypal">PayPal</option>
+<option value="ewallet">E-Wallet</option>
+<option value="qris">QRIS</option>
+</select>
+<!-- E-Wallet Section -->
+<div id="ewallet-info" style="display: none;">
+<label for="ewallet-type">Pilih E-Wallet</label>
+<select id="ewallet-type" name="ewallet-type">
+<option value="dana">Dana</option>
+<option value="ovo">OVO</option>
+<option value="gopay">GoPay</option>
+</select>
+</div>
+<!-- QRIS Section -->
+<div id="qris-info" style="display: none;">
+<p>Silakan scan kode QR yang tersedia untuk melakukan pembayaran via QRIS.</p>
+<img alt="QRIS Code" src="images/qris-code.png" width="200"/>
+</div>
+<button type="submit">Selesaikan Pembayaran</button>
+</form>
+</section>
+<footer class="footer">
+<p>© 2025 MekanikHost. All rights reserved. | <a href="privasi.html">Kebijakan Privasi</a> | <a href="syarat.html">Syarat dan Ketentuan</a></p>
+</footer>
+<script>
+        // Menampilkan opsi E-Wallet atau QRIS berdasarkan pilihan pembayaran
+        const paymentMethodSelect = document.getElementById("payment-method");
+        const ewalletInfo = document.getElementById("ewallet-info");
+        const qrisInfo = document.getElementById("qris-info");
+
+        paymentMethodSelect.addEventListener("change", function () {
+            const selectedMethod = paymentMethodSelect.value;
+            if (selectedMethod === "ewallet") {
+                ewalletInfo.style.display = "block";
+                qrisInfo.style.display = "none";
+            } else if (selectedMethod === "qris") {
+                qrisInfo.style.display = "block";
+                ewalletInfo.style.display = "none";
+            } else {
+                ewalletInfo.style.display = "none";
+                qrisInfo.style.display = "none";
+            }
+        });
+    </script>
+<img alt="QRIS Mekanikhost" src="qris-mekanikhost.png" style="width:200px;display:block;margin-top:20px;"/></body>
+</html>

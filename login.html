@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+
+<html lang="id">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Masuk ke akun MekanikHost Anda untuk mengelola hosting dan domain Anda." name="description"/>
+<meta content="login hosting, MekanikHost, masuk akun hosting" name="keywords"/>
+<meta content="MekanikHost" name="author"/>
+<title>Login - MekanikHost</title>
+<style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            font-size: 20px;
+            font-weight: 300;
+        }
+
+        nav {
+            background-color: #495057;
+            padding: 15px 20px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 15px;
+            font-size: 18px;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            background-color: #f9a825;
+        }
+
+        .login-section {
+            padding: 60px 20px;
+            background-color: #fff;
+            text-align: center;
+            max-width: 500px;
+            margin: 0 auto;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .login-section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .login-section p {
+            font-size: 20px;
+            margin-bottom: 40px;
+            color: #555;
+        }
+
+        .login-form {
+            width: 100%;
+        }
+
+        .login-form input {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+
+        .login-form button {
+            width: 100%;
+            background-color: #f9a825;
+            color: white;
+            padding: 15px;
+            font-size: 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            border: none;
+            transition: background-color 0.3s;
+        }
+
+        .login-form button:hover {
+            background-color: #333;
+        }
+
+        .forgot-password {
+            display: block;
+            margin-top: 10px;
+            font-size: 16px;
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        .forgot-password:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        .footer a {
+            color: #f9a825;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            .login-section {
+                padding: 40px 20px;
+            }
+
+            .login-section h2 {
+                font-size: 32px;
+            }
+
+            .login-form button {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+<header><img alt="Mekanikhost Logo" src="https://i.imgur.com/4M7IWwP.png" style="height:50px;margin-right:10px;"/>
+<h1>MekanikHost</h1>
+<p>Login ke Akun Anda</p>
+</header>
+<nav>
+<a href="index.html">Beranda</a>
+<a href="hosting.html">Layanan</a>
+<a href="about.html">Tentang Kami</a>
+<a href="contact.html">Kontak</a>
+</nav>
+<section class="login-section">
+<h2>Masuk ke Akun Anda</h2>
+<p>Silakan masukkan email dan kata sandi Anda untuk melanjutkan.</p>
+<form action="dashboard.html" class="login-form" method="POST">
+<label for="email">Email</label>
+<input id="email" name="email" placeholder="Masukkan email Anda" required="" type="email"/>
+<label for="password">Kata Sandi</label>
+<input id="password" name="password" placeholder="Masukkan kata sandi Anda" required="" type="password"/>
+<button type="submit">Masuk</button>
+</form>
+<a class="forgot-password" href="reset-password.html">Lupa kata sandi?</a>
+</section>
+<footer class="footer">
+<p>© 2025 MekanikHost. All rights reserved. | <a href="privasi.html">Kebijakan Privasi</a> | <a href="syarat.html">Syarat dan Ketentuan</a></p>
+</footer>
+</body>
+</html>

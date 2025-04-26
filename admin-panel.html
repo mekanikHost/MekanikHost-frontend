@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<html lang="id">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Admin Panel MekanikHost - Kelola Pesanan dan Data Klien" name="description"/>
+<meta content="admin panel, kontrol hosting, MekanikHost" name="keywords"/>
+<meta content="MekanikHost" name="author"/>
+<title>Admin Panel - MekanikHost</title>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    header h1 { font-size: 48px; margin-bottom: 10px; letter-spacing: 2px; }
+    header p { font-size: 20px; font-weight: 300; }
+    nav {
+      background-color: #495057;
+      padding: 15px 20px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-size: 18px;
+      border-radius: 5px;
+      padding: 10px 20px;
+    }
+    nav a:hover { background-color: #f9a825; }
+    .panel-section {
+      padding: 40px 20px;
+    }
+    .panel-section h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: #fff;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    th, td {
+      padding: 15px;
+      border: 1px solid #ccc;
+      text-align: left;
+    }
+    th { background-color: #f9a825; color: white; }
+    tr:nth-child(even) { background-color: #f9f9f9; }
+    .footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+    .footer a {
+      color: #f9a825;
+      text-decoration: none;
+    }
+    .footer a:hover { text-decoration: underline; }
+    @media screen and (max-width: 768px) {
+      table, thead, tbody, th, td, tr { display: block; }
+      th { display: none; }
+      td {
+        position: relative;
+        padding-left: 50%;
+        border: none;
+        border-bottom: 1px solid #ccc;
+      }
+      td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 15px;
+        font-weight: bold;
+      }
+    }
+  </style>
+</head>
+<body>
+<header><img alt="Mekanikhost Logo" src="https://i.imgur.com/4M7IWwP.png" style="height:50px;margin-right:10px;"/>
+<h1>Admin Panel</h1>
+<p>MekanikHost - Kelola Pesanan Klien</p>
+</header>
+<nav>
+<a href="admin-panel.html">Dashboard</a>
+<a href="invoice.html">Invoice</a>
+<a href="konfirmasi.html">Konfirmasi Pembayaran</a>
+<a href="kelola-tiket.html">Kelola Tiket</a>
+<a href="buat-paket.html">Buat Paket</a>
+<a href="logout.html">Logout</a>
+</nav>
+<section class="panel-section">
+<h2>Daftar Pesanan Pelanggan</h2>
+<table>
+<thead>
+<tr>
+<th>Nama Domain</th>
+<th>Paket Hosting</th>
+<th>Durasi</th>
+<th>Email</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="Nama Domain">mekanikhost.com</td>
+<td data-label="Paket Hosting">VPS Hosting</td>
+<td data-label="Durasi">6 Bulan</td>
+<td data-label="Email">user@email.com</td>
+<td data-label="Status">Menunggu Pembayaran</td>
+</tr>
+<tr>
+<td data-label="Nama Domain">mekanik.id</td>
+<td data-label="Paket Hosting">Shared Hosting</td>
+<td data-label="Durasi">3 Bulan</td>
+<td data-label="Email">klien@example.com</td>
+<td data-label="Status">Sudah Dibayar</td>
+</tr>
+</tbody>
+</table>
+</section>
+<footer class="footer">
+<p>© 2025 MekanikHost. All rights reserved. | <a href="privasi.html">Privasi</a> | <a href="syarat.html">Syarat</a></p>
+</footer>
+</body>
+</html>
+&gt;
+

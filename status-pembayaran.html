@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+
+<html lang="id">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Status Pembayaran - MekanikHost</title>
+<meta content="Status Pembayaran Klien - MekanikHost" name="description"/>
+<meta content="MekanikHost" name="author"/>
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      color: #333;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    header img {
+      width: 180px;
+      margin-bottom: 10px;
+    }
+
+    nav {
+      background-color: #495057;
+      text-align: center;
+      padding: 15px;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-size: 18px;
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
+
+    nav a:hover {
+      background-color: #f9a825;
+    }
+
+    .status-section {
+      max-width: 900px;
+      margin: 50px auto;
+      background: white;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .status-section h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th, td {
+      padding: 15px;
+      border: 1px solid #ddd;
+      text-align: center;
+    }
+
+    th {
+      background-color: #f9a825;
+      color: white;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    .btn {
+      background-color: #f9a825;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    .btn:hover {
+      background-color: #333;
+    }
+
+    .footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+
+    .footer a {
+      color: #f9a825;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media screen and (max-width: 768px) {
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+
+      table, thead, tbody, th, td, tr {
+        display: block;
+      }
+
+      th, td {
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+<body>
+<header>
+<img alt="MekanikHost Logo" src="path_to_logo.png"/>
+<h1>MekanikHost</h1>
+<p>Status Pembayaran Anda</p>
+</header>
+<nav>
+<a href="client-area.html">Dashboard</a>
+<a href="invoice.html">Invoice Saya</a>
+<a href="konfirmasi.html">Konfirmasi Pembayaran</a>
+<a href="ticket.html">Bantuan</a>
+<a href="logout.html">Logout</a>
+</nav>
+<section class="status-section">
+<h2>Riwayat dan Status Pembayaran</h2>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Tanggal</th>
+<th>Status</th>
+<th>Jumlah</th>
+<th>Aksi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>#INV-1001</td>
+<td>20 April 2025</td>
+<td style="color: green;">Lunas</td>
+<td>Rp 150.000</td>
+<td><a class="btn" href="invoice.html">Lihat Invoice</a></td>
+</tr>
+<tr>
+<td>#INV-1002</td>
+<td>15 April 2025</td>
+<td style="color: red;">Pending</td>
+<td>Rp 150.000</td>
+<td><a class="btn" href="payment.html">Bayar Sekarang</a></td>
+</tr>
+</tbody>
+</table>
+<br/>
+<a class="btn" href="client-area.html">Kembali ke Dashboard</a>
+</section>
+<footer class="footer">
+<p>© 2025 MekanikHost. All rights reserved. |
+      <a href="privasi.html">Privasi</a> |
+      <a href="syarat.html">Syarat &amp; Ketentuan</a>
+</p>
+</footer>
+</body>
+</html>

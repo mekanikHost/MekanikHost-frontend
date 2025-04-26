@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<html lang="id">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Pembayaran - MekanikHost</title>
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      color: #333;
+    }
+    header {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    header img {
+      width: 180px;
+      margin-bottom: 10px;
+    }
+    .payment-container {
+      max-width: 600px;
+      margin: 50px auto;
+      background: white;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .payment-container h2 {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 25px;
+    }
+    label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 5px;
+    }
+    select, button {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0 20px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    button {
+      background-color: #f9a825;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #333;
+    }
+    .footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+    .footer a {
+      color: #f9a825;
+      text-decoration: none;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    .total-price {
+      font-weight: bold;
+      font-size: 18px;
+      margin-top: 10px;
+    }
+    .qr-container {
+      display: flex;
+      justify-content: center;
+      margin: 20px 0;
+    }
+    .qr-container img {
+      width: 200px;
+      height: 200px;
+    }
+  </style>
+</head>
+<body>
+<header>
+<img alt="MekanikHost Logo" src="qris.png"/>
+<h1>Pembayaran</h1>
+<p>Silakan lanjutkan pembayaran Anda</p>
+</header>
+<section class="payment-container">
+<h2>Detail Pembayaran</h2>
+<p><strong>Paket:</strong> <span id="paket-nama"></span></p>
+<p><strong>Total Harga:</strong> <span id="paket-harga">-</span></p>
+<label for="metode">Metode Pembayaran:</label>
+<select id="metode">
+<option value="qris">QRIS (Otomatis)</option>
+<option value="transfer">Transfer Bank</option>
+<option value="card">Kartu Kredit</option>
+</select>
+<div class="qr-container">
+<img alt="QRIS Payment" id="qris-image" src="qris-placeholder.png"/>
+</div>
+<button onclick="lanjutkanPembayaran()">Lanjutkan Pembayaran</button>
+</section>
+<footer class="footer">
+<p>© 2025 MekanikHost. All rights reserved. |
+    <a href="privasi.html">Privasi</a> |
+    <a href="syarat.html">Syarat &amp; Ketentuan</a>
+</p>
+</footer>
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const paket = params.get('paket');
+  const harga = params.get('harga');
+
+  document.getElementById("paket-nama").textContent = paket ?? '-';
+  document.getElementById("paket-harga").textContent = harga ? "Rp " + parseInt(harga).toLocaleString("id-ID") : '-';
+
+  function lanjutkanPembayaran() {
+    window.location.href = "konfirmasi.html";
+  }
+</script>
+</body>
+</html>

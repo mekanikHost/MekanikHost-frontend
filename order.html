@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<html lang="id">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Pesan Domain - MekanikHost</title>
+<meta content="Pesan Domain untuk Layanan Hosting di MekanikHost" name="description"/>
+<meta content="pesan domain, domain, hosting, MekanikHost" name="keywords"/>
+<meta content="MekanikHost" name="author"/>
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    header img {
+      width: 180px;
+      margin-bottom: 10px;
+    }
+
+    .order-container {
+      max-width: 600px;
+      margin: 50px auto;
+      background: white;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .order-container h2 {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 25px;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input, select, button {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0 20px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    button {
+      background-color: #f9a825;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #333;
+    }
+
+    .footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+
+    .footer a {
+      color: #f9a825;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    .help-link {
+      display: inline-block;
+      background-color: #f9a825;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .help-link:hover {
+      background-color: #333;
+    }
+
+    .total-price {
+      font-weight: bold;
+      font-size: 18px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+<header>
+<img alt="MekanikHost Logo" src="path_to_logo.png"/>
+<h1>MekanikHost</h1>
+<p>Pesan Domain Anda Sekarang</p>
+</header>
+<section class="order-container">
+<h2>Pemesanan Domain</h2>
+<form action="payment.html" method="GET">
+<label for="domain-name">Nama Domain:</label>
+<input id="domain-name" placeholder="contoh: mekaniktoto.com" required="" type="text"/>
+<label for="domain-type">Ekstensi Domain:</label>
+<select id="domain-type" required="">
+<option value=".com">.com</option>
+<option value=".net">.net</option>
+<option value=".id">.id</option>
+<option value=".org">.org</option>
+</select>
+<label for="durasi">Durasi (Bulan):</label>
+<select id="durasi" required="">
+<option value="1">1 Bulan</option>
+<option value="3">3 Bulan</option>
+<option value="6">6 Bulan</option>
+<option value="12">12 Bulan</option>
+</select>
+<p class="total-price" id="total-harga">Total Harga: -</p>
+<button type="submit">Lanjutkan Pembayaran</button>
+</form>
+<p style="font-size: 14px; color: #666;">* Pembayaran akan diverifikasi dan domain Anda aktif setelah konfirmasi.</p>
+<a class="help-link" href="ticket.html">Butuh Bantuan?</a>
+</section>
+<footer class="footer">
+<p>© 2025 MekanikHost. All rights reserved. |
+    <a href="privasi.html">Privasi</a> |
+    <a href="syarat.html">Syarat &amp; Ketentuan</a>
+</p>
+</footer>
+<script>
+  const hargaPerBulan = {
+    ".com": 15000,
+    ".net": 14000,
+    ".id": 18000,
+    ".org": 16000
+  };
+
+  // Fungsi untuk menghitung harga total
+  document.getElementById("durasi").addEventListener("change", hitungHarga);
+  document.getElementById("domain-type").addEventListener("change", hitungHarga);
+
+  function hitungHarga() {
+    const domainType = document.getElementById("domain-type").value;
+    const durasi = parseInt(document.getElementById("durasi").value);
+    const totalHarga = hargaPerBulan[domainType] * durasi;
+
+    document.getElementById("total-harga").textContent = "Total Harga: Rp " + totalHarga.toLocaleString("id-ID");
+  }
+
+  // Menjalankan kalkulasi pertama kali ketika halaman dimuat
+  hitungHarga();
+</script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html lang="id">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kelola Tiket - MekanikHost</title>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    header h1 { font-size: 48px; margin-bottom: 10px; }
+    nav {
+      background-color: #495057;
+      padding: 15px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-size: 18px;
+      border-radius: 5px;
+      padding: 10px 20px;
+    }
+    nav a:hover { background-color: #f9a825; }
+    .ticket-section {
+      max-width: 800px;
+      margin: 60px auto;
+      background: white;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .ticket-section h2 { font-size: 28px; text-align: center; margin-bottom: 30px; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: #fff;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    th, td {
+      padding: 15px;
+      border: 1px solid #ccc;
+      text-align: left;
+    }
+    th { background-color: #f9a825; color: white; }
+    tr:nth-child(even) { background-color: #f9f9f9; }
+    .footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+<header><img alt="Mekanikhost Logo" src="https://i.imgur.com/4M7IWwP.png" style="height:50px;margin-right:10px;"/>
+<h1>Kelola Tiket Bantuan</h1>
+<p>Kelola Tiket dari Klien MekanikHost</p>
+</header>
+<nav>
+<a href="admin-panel.html">Admin Panel</a>
+<a href="detail-klien.html">Detail Klien</a>
+<a href="buat-paket.html">Buat Paket</a>
+<a href="logout.html">Logout</a>
+</nav>
+<section class="ticket-section">
+<h2>Daftar Tiket Bantuan</h2>
+<table>
+<thead>
+<tr>
+<th>ID Tiket</th>
+<th>Subjek</th>
+<th>Status</th>
+<th>Waktu Dibuat</th>
+<th>Aksi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>#12345</td>
+<td>Masalah Hosting</td>
+<td>Dalam Proses</td>
+<td>20 April 2025</td>
+<td><a href="#">Lihat Tiket</a></td>
+</tr>
+<tr>
+<td>#12346</td>
+<td>Reset Password</td>
+<td>Selesai</td>
+<td>19 April 2025</td>
+<td><a href="#">Lihat Tiket</a></td>
+</tr>
+</tbody>
+</table>
+</section>
+<footer class="footer">
+<p>© 2025 MekanikHost. All rights reserved. | <a href="privasi.html">Privasi</a> | <a href="syarat.html">Syarat</a></p>
+</footer>
+</body>
+</html>

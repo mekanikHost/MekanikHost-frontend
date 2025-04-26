@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html lang="id">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Testimoni Pelanggan - MekanikHost</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .content {
+      max-width: 1000px;
+      margin: 60px auto;
+      background-color: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.05);
+    }
+    .carousel-item {
+      padding: 20px;
+    }
+    .rating {
+      color: gold;
+      font-size: 18px;
+    }
+    .form-section {
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+<div class="content">
+<h3 class="text-center mb-4">Testimoni Pelanggan</h3>
+<!-- Filter -->
+<div class="mb-4 text-end">
+<label class="form-label me-2" for="filterRating">Filter Rating:</label>
+<select class="form-select w-auto d-inline" id="filterRating" onchange="filterTestimoni()">
+<option value="all">Semua</option>
+<option value="5">⭐⭐⭐⭐⭐</option>
+<option value="4">⭐⭐⭐⭐</option>
+<option value="3">⭐⭐⭐</option>
+</select>
+</div>
+<!-- Carousel -->
+<div class="carousel slide" data-bs-ride="carousel" id="testiCarousel">
+<div class="carousel-inner" id="testiWrapper">
+<div class="carousel-item active" data-rating="5">
+<h5>Ahmad R. <span class="rating">⭐⭐⭐⭐⭐</span></h5>
+<p>Layanan VPS cepat dan support-nya responsif. Mantap MekanikHost!</p>
+</div>
+<div class="carousel-item" data-rating="4">
+<h5>Devi S. <span class="rating">⭐⭐⭐⭐</span></h5>
+<p>Order domain langsung aktif. Harga per bulan sangat terjangkau.</p>
+</div>
+<div class="carousel-item" data-rating="3">
+<h5>Lina T. <span class="rating">⭐⭐⭐</span></h5>
+<p>Awalnya bingung, tapi akhirnya bisa juga setup hosting sendiri. Terima kasih!</p>
+</div>
+</div>
+<button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#testiCarousel" type="button">
+<span class="carousel-control-prev-icon"></span>
+</button>
+<button class="carousel-control-next" data-bs-slide="next" data-bs-target="#testiCarousel" type="button">
+<span class="carousel-control-next-icon"></span>
+</button>
+</div>
+<!-- Form Tambah Testimoni -->
+<div class="form-section">
+<h4 class="mb-3">Tulis Testimoni Anda</h4>
+<form action="kirim-testimoni.php" method="POST">
+<div class="mb-3">
+<label class="form-label" for="nama">Nama</label>
+<input class="form-control" id="nama" name="nama" required="" type="text"/>
+</div>
+<div class="mb-3">
+<label class="form-label" for="rating">Rating</label>
+<select class="form-select" id="rating" name="rating" required="">
+<option value="5">5 - Sangat Puas</option>
+<option value="4">4 - Puas</option>
+<option value="3">3 - Cukup</option>
+</select>
+</div>
+<div class="mb-3">
+<label class="form-label" for="pesan">Pesan</label>
+<textarea class="form-control" id="pesan" name="pesan" required="" rows="4"></textarea>
+</div>
+<button class="btn btn-warning" type="submit">Kirim Testimoni</button>
+</form>
+</div>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  function filterTestimoni() {
+    const selected = document.getElementById('filterRating').value;
+    const items = document.querySelectorAll('.carousel-item');
+    items.forEach((item) => {
+      if (selected === 'all' || item.dataset.rating === selected) {
+        item.style.display = 'block';
+      } else {
+        item.style.display = 'none';
+      }
+    });
+  }
+</script>
+</body>
+</html>

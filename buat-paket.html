@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html lang="id">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Buat Paket Hosting - MekanikHost</title>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    header h1 { font-size: 48px; margin-bottom: 10px; letter-spacing: 2px; }
+    nav {
+      background-color: #495057;
+      padding: 15px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-size: 18px;
+      border-radius: 5px;
+      padding: 10px 20px;
+    }
+    nav a:hover { background-color: #f9a825; }
+    .package-section {
+      max-width: 700px;
+      margin: 60px auto;
+      background: white;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .package-section h2 { font-size: 28px; text-align: center; margin-bottom: 30px; }
+    .footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+<header><img alt="Mekanikhost Logo" src="https://i.imgur.com/4M7IWwP.png" style="height:50px;margin-right:10px;"/>
+<h1>Buat Paket Hosting Baru</h1>
+<p>Tambah Paket Hosting untuk Layanan MekanikHost</p>
+</header>
+<nav>
+<a href="admin-panel.html">Admin Panel</a>
+<a href="kelola-tiket.html">Kelola Tiket</a>
+<a href="logout.html">Logout</a>
+</nav>
+<section class="package-section">
+<h2>Formulir Paket Hosting Baru</h2>
+<form action="submit-package.html" method="POST">
+<label for="package-name">Nama Paket</label>
+<input id="package-name" name="package-name" placeholder="Contoh: VPS Hosting" required="" type="text"/>
+<label for="package-price">Harga Paket</label>
+<input id="package-price" name="package-price" placeholder="Contoh: 150000" required="" type="number"/>
+<label for="package-duration">Durasi (Bulan)</label>
+<input id="package-duration" name="package-duration" placeholder="Contoh: 12" required="" type="number"/>
+<button type="submit">Buat Paket</button>
+</form>
+</section>
+<footer class="footer">
+<p>© 2025 MekanikHost. All rights reserved. | <a href="privasi.html">Privasi</a> | <a href="syarat.html">Syarat</a></p>
+</footer>
+</body>
+</html>
